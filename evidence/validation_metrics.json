@@ -1,0 +1,96 @@
+{
+  "validation_window": {
+    "start": "2026-04-01",
+    "end": "2026-06-30",
+    "n": 2126
+  },
+  "training_window": {
+    "start": "2025-04-01",
+    "end": "2026-03-31",
+    "n": 8378
+  },
+  "deduplication": {
+    "raw_training_rows": 11155,
+    "duplicate_order_id_rows": 651,
+    "unique_orders_after_deduplication": 10504,
+    "crm_rows_in_raw_file": 10504,
+    "partner_feed_rows_in_raw_file": 651
+  },
+  "label_rate_validation": 0.11523988711194733,
+  "majority_class_baseline_accuracy": 0.8847601128880527,
+  "selected_model": "LogisticRegression (C=0.2, L2)",
+  "model_comparison": [
+    {
+      "model": "Majority Non-Return Baseline",
+      "roc_auc": 0.5,
+      "average_precision": 0.1152,
+      "brier_score": 0.1152,
+      "accuracy_at_0_50": 0.8848,
+      "precision_at_0_12": 0.0,
+      "recall_at_0_12": 0.0,
+      "f1_at_0_12": 0.0
+    },
+    {
+      "model": "LogisticRegression (C=0.2, L2)",
+      "roc_auc": 0.7827,
+      "average_precision": 0.4076,
+      "brier_score": 0.0853,
+      "accuracy_at_0_50": 0.8956,
+      "precision_at_0_12": 0.2576,
+      "recall_at_0_12": 0.6204,
+      "f1_at_0_12": 0.3641
+    },
+    {
+      "model": "HistGradientBoostingClassifier",
+      "roc_auc": 0.7517,
+      "average_precision": 0.3572,
+      "brier_score": 0.0891,
+      "accuracy_at_0_50": 0.8913,
+      "precision_at_0_12": 0.268,
+      "recall_at_0_12": 0.6082,
+      "f1_at_0_12": 0.372
+    },
+    {
+      "model": "RandomForestClassifier",
+      "roc_auc": 0.7531,
+      "average_precision": 0.3738,
+      "brier_score": 0.0905,
+      "accuracy_at_0_50": 0.8852,
+      "precision_at_0_12": 0.2152,
+      "recall_at_0_12": 0.6939,
+      "f1_at_0_12": 0.3285
+    }
+  ],
+  "roc_auc": 0.7826601134871811,
+  "average_precision": 0.4076027476049493,
+  "brier_score": 0.08532770417616203,
+  "accuracy_at_0_5": 0.8955785512699906,
+  "precision_at_0_5": 0.7555555555555555,
+  "recall_at_0_5": 0.13877551020408163,
+  "confusion_matrix_at_0_5": {
+    "true_negative": 1870,
+    "false_positive": 11,
+    "false_negative": 211,
+    "true_positive": 34
+  },
+  "operational_threshold": 0.12,
+  "break_even_threshold_from_policy": 0.11180124223602485,
+  "flagged_at_operational_threshold": 590,
+  "flag_rate_at_operational_threshold": 0.277516462841016,
+  "precision_at_operational_threshold": 0.2576271186440678,
+  "recall_at_operational_threshold": 0.6204081632653061,
+  "false_positive_calls_at_operational_threshold": 438,
+  "false_negative_returns_at_operational_threshold": 93,
+  "validation_net_benefit_scenario_per_700_orders_inr": 11402.163687676384,
+  "return_handling_cost_inr": 1150.0,
+  "confirmation_call_cost_inr": 45.0,
+  "assumed_call_prevention_rate": 0.35,
+  "paid_inference_api_calls": 0,
+  "notes": [
+    "This is a chronological validation estimate, not the hidden test score.",
+    "Candidate models (Majority baseline, LogisticRegression, HistGradientBoosting, RandomForest) were evaluated on the same temporal split.",
+    "Logistic Regression achieved the strongest generalization (ROC-AUC 0.7827, PR-AUC 0.4076, Brier 0.0853) and superior probability calibration.",
+    "The monthly rupee scenario assumes the policy's 35% call-effectiveness figure generalises and is an illustrative scenario, not a causal proof.",
+    "Predicting all non-return achieves 88.48% baseline accuracy while detecting 0 returns; 95% accuracy is unverified and operationally deceptive."
+  ]
+}

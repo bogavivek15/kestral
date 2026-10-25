@@ -1,0 +1,25 @@
+# Private assignment inputs: never publish these files.
+private_data/*.csv
+private_data/*.txt
+private_data/*.pdf
+
+# Derived model artifact: keep private unless the data owner approves publication.
+artifacts/*.joblib
+
+# Python / local tooling
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.DS_Store
+
+# Local logs
+*.log
+.venv/
+__pycache__/
+.pytest_cache/
+private_data/
+*.py[cod]
+.env
+.env.*
+!.env.example

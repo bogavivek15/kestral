@@ -1,0 +1,19 @@
+{
+  "order_id": "DEMO-001",
+  "order_placed_at": "2026-07-01 12:40",
+  "customer_id": "DEMO-CUSTOMER",
+  "sku": "KH-RV-01",
+  "sales_channel": "marketplace",
+  "payment_mode": "cod",
+  "discount_pct": 22,
+  "qty": 1,
+  "order_value_inr": 23164.44,
+  "promised_delivery_days": 8,
+  "delivery_pincode": "411001",
+  "is_gift": "N",
+  "customer_prior_orders": 3,
+  "customer_prior_returns": 2,
+  "delivery_note": "Call before delivery",
+  "customer_context": {"city": "Pune", "state": "MH", "signup_date": "2024-02-11", "shield_member": "N"},
+  "product_context": {"family": "Robot Vacuum", "list_price_inr": 17599, "warranty_months": 12, "launch_date": "2024-03-06"}
+}

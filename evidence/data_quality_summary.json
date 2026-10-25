@@ -1,0 +1,16 @@
+{
+  "raw_training_rows": 11155,
+  "unique_training_orders": 10504,
+  "duplicate_order_id_rows_removed": 651,
+  "test_rows": 2096,
+  "unique_test_order_ids": 2096,
+  "october_2025_unique_crm_orders": 700,
+  "october_2025_order_value_ratio_over_50": 700,
+  "orders_with_signup_after_order_date": 1999,
+  "unique_orders_with_prompt_like_delivery_note_text": 4,
+  "rows_with_prompt_like_delivery_note_text_after_deduplication": 4,
+  "pickup_timestamp_columns_used_as_features": false,
+  "service_event_columns_used_as_features": false,
+  "raw_delivery_note_used_as_feature": false,
+  "customer_id_or_order_id_used_as_features": false
+}
